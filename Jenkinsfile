@@ -21,11 +21,8 @@ pipeline {
 
      stage('Push Docker Image') {
     steps {
-        sh '''
-        echo "Logging into Docker Hub"
-        docker login -u jiya2022 -p dckr_pat_JCu1wWqdu6jRL1G6SMyIYhZCrrA
-        docker push jiya2022/app
-        '''
+        sh 'docker login -u jiya2022 -p dckr_pat_JCu1wWqdu6jRL1G6SMyIYhZCrrA
+        sh 'docker push jiya2022/app'
     }
 }
 
