@@ -7,24 +7,24 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
+        stage('Clone Repo') {
             steps {
-                checkout scm
+                git branch: 'main', url: 'https://github.com/JiyaKeswani/jenkins-docker-k8s.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $DOCKER_IMAGE .'
+                sh 'docker build -t jiya2022/app .'
             }
         }
 
-     stage('Push Docker Image') {
-    steps {
-        sh 'docker login -u jiya2022 -p dckr_pat_JCu1wWqdu6jRL1G6SMyIYhZCrrA
-        sh 'docker push jiya2022/app'
-    }
-}
+        stage('Push Docker Image') {
+            steps {
+                sh 'docker login -u jiya2022 -p dckr_pat_JCu1wWqdu6jRL1G6SMyIYhZCrrA'
+                sh 'docker push jiya2022/app'
+            }
+        }
 
         stage('Deploy to Kubernetes') {
             steps {
