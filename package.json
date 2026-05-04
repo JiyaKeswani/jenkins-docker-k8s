@@ -1,7 +1,12 @@
-id="file2"
 {
-  "name": "cicd-app",
+  "name": "node-app",
   "version": "1.0.0",
+  "description": "Simple Node App",
   "main": "app.js",
-  "dependencies": {}
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
