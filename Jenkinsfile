@@ -1,4 +1,3 @@
-id="file6"
 pipeline {
     agent any
 
