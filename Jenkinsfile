@@ -19,11 +19,14 @@ pipeline {
             }
         }
 
-        stage('Push Docker Image') {
-            steps {
-                sh 'docker push $DOCKER_IMAGE'
-            }
-        }
+       stage('Push Docker Image') {
+    steps {
+        sh '''
+        docker login -u jiya2022 -p Infinite..0
+        docker push $DOCKER_IMAGE
+        '''
+    }
+}
 
         stage('Deploy to Kubernetes') {
             steps {
