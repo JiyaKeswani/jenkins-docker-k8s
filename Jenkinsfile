@@ -35,7 +35,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
     steps {
         sh '''
-        export KUBECONFIG=/opt/kube/config
+        export KUBECONFIG=/var/lib/jenkins/.kube/config
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml
         '''
