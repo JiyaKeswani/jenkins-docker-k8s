@@ -21,7 +21,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                sh 'docker login -u jiya2022 -p dckr_pat_JCu1wWqdu6jRL1G6SMyIYhZCrrA'
+                sh 'docker login -u jiya2022 -p dckr_pat_P8LHWrEvtIRJGQwQk7pDJm4OUgQ'
                 sh 'docker push jiya2022/app'
             }
         }
