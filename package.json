@@ -1,0 +1,7 @@
+id="file2"
+{
+  "name": "cicd-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {}
+}
