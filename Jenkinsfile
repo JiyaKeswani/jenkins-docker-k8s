@@ -12,6 +12,12 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/JiyaKeswani/jenkins-docker-k8s.git'
             }
         }
+        stage('Docker Login') {
+    steps {
+        sh 'docker login -u jiya2022 -p dckr_pat_P8LHWrEvtIRJGQwQk7pDJm4OUgQ'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
