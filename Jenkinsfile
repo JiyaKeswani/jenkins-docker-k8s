@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "YOUR_DOCKERHUB_USERNAME/app"
+        DOCKER_IMAGE = "jiya2022/app"
     }
 
     stages {
