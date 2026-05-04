@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
       - name: jiya-app
-image: jiya2022/app:latest
-    imagePullPolicy: Always
+image: jiya2022/app:v2
         ports:
         - containerPort: 3000
